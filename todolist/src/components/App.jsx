@@ -9,6 +9,13 @@ function App() {
     setInputText(newValue);
   }
 
+  function addItem() {
+    setItems((prevItems) => {
+      return [...prevItems, inputText];
+    });
+    setInputText("");
+  }
+
   return (
     <div className="container">
       <div className="heading">
